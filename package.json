@@ -1,0 +1,26 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.7.2",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "@vitejs/plugin-react": "^3.0.1",
+        "jquery": "^3.6.3",
+        "moment": "^2.29.4",
+        "react-datepicker": "^4.10.0",
+        "react-dom": "^18.2.0",
+        "react-owl-carousel": "^2.3.3",
+        "react-paginate": "^8.1.4",
+        "react-router-dom": "^6.7.0",
+        "react-slideshow-image": "^4.2.0",
+        "swiper": "^8.4.6"
+    }
+}
