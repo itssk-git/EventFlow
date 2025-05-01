@@ -23,11 +23,8 @@ Route::post('/event_lists',[homeController::class,'eventList']);  //home page al
 Route::get('/upcoming_lists',[homeController::class,'upcomingeventList']);  //home page all Upcoming events
 Route::get('/allupcoming_lists',[homeController::class,'allupcomingeventList']);  //All Upcoming events
 Route::get('/category_list',[homeController::class,'categoryList']); //All event category list
-Route::get('/settings',[homeController::class,'settings']);
 Route::get('/event_details/{id}',[homeController::class,'event_details']); //single event details page
-Route::get('/events/{id}',[homeController::class,'events']); //event category show all events
 // Route::get('/all_events',[homeController::class,'all_events']); //all events page
-Route::get('/booking/{id}',[UserController::class,'booking_details']);
 Route::post('/booking/{id}',[UserController::class,'event_booking']);
 Route::get('/all_events',[homeController::class,'search_event']);  
 Route::get('/all_category',[homeController::class,'allcategory']);  
