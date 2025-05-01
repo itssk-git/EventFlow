@@ -16,7 +16,6 @@ class ContactController extends Controller
     public function index(Request $request)
     {
         //
-        if($request->ajax()){
             $data = Contact::latest()->orderBy('id','Desc')->get();
             return Datatables::of($data)
                     ->addIndexColumn()

@@ -26,7 +26,6 @@ Route::get('/category_list',[homeController::class,'categoryList']); //All event
 Route::get('/event_details/{id}',[homeController::class,'event_details']); //single event details page
 // Route::get('/all_events',[homeController::class,'all_events']); //all events page
 Route::get('/all_events',[homeController::class,'search_event']);  
-Route::get('/all_category',[homeController::class,'allcategory']);  
 Route::post('/forgotpassword',[UserController::class,'submitForgetPasswordForm']);  
 Route::post('/resetpassword',[UserController::class,'resetpasswordUpdate']);  
 
