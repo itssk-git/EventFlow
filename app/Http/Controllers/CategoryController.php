@@ -22,8 +22,6 @@ class CategoryController extends Controller
                     ->addIndexColumn()
                     ->editColumn('image', function($row){
                         if($row->cat_img != ''){
-                            $img = '<img src="'.asset("category/".$row->cat_img).'" width="100px" height="70px" style="object-fit:cover;">';
-                        }else{
                             $img = '<img src="'.asset("category/").'" width="100px">';
                         }
                         return $img;
@@ -165,7 +163,6 @@ class CategoryController extends Controller
     }
 
     public function category_list(){
-        $category = Category::select(['category.*'])->get();
         return $category;
     }
 }
