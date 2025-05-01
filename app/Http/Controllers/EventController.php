@@ -18,9 +18,7 @@ class EventController extends Controller
     {
         //
         if($request->ajax()){
-            $data = Event::select(['events.*','category.name as cat_name'])->leftjoin('category','events.event_cat','=','category.id')
-                    ->orderBy('event_id','Desc')->get();
-            return Datatables::of($data)
+       
                     ->addIndexColumn()
                     ->editColumn('image', function($row){
                         $data = explode(',',$row->event_img);

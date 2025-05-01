@@ -18,7 +18,6 @@ class AdminAuth
     public function handle(Request $request, Closure $next)
     {
 
-        $path = $request->path();
         if(($path == 'admin') && Session::get('admin')){
             return redirect('/admin/dashboard');
         }
