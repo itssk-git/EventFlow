@@ -25,7 +25,6 @@ Route::get('/allupcoming_lists',[homeController::class,'allupcomingeventList']);
 Route::get('/category_list',[homeController::class,'categoryList']); //All event category list
 Route::get('/event_details/{id}',[homeController::class,'event_details']); //single event details page
 // Route::get('/all_events',[homeController::class,'all_events']); //all events page
-Route::post('/booking/{id}',[UserController::class,'event_booking']);
 Route::get('/all_events',[homeController::class,'search_event']);  
 Route::get('/all_category',[homeController::class,'allcategory']);  
 Route::post('/forgotpassword',[UserController::class,'submitForgetPasswordForm']);  

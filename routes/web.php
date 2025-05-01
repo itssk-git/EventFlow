@@ -38,9 +38,7 @@ Route::group(['middleware'=>'installed'], function(){
         return view('welcome');
     });
 
-    Route::get('/all_upcomingevents', function () {
-        return view('welcome');
-    });
+ 
 
     Route::get('/contact', function () {
         return view('welcome');

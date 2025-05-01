@@ -21,7 +21,6 @@ class BookingController extends Controller
         if($request->ajax()){
             $data = Booking::select(['booking.*','events.event_name'])->leftjoin('events','booking.event_id','=','events.event_id')
                     ->orderBy('event_id','desc')->get();
-            return Datatables::of($data)
                 ->addIndexColumn()
                 ->editColumn('status', function($row){
                     if($row->payment_status == '1'){
