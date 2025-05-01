@@ -34,8 +34,6 @@ class AdminController extends Controller
                     $request->session()->put('admin','1');
                     $request->session()->put('admin_name',$admin->admin_name);
                     return '1';
-                }else{
-                    return response()->json(['password'=>'Username and Password does not matched.']);
                 }
             }
 
