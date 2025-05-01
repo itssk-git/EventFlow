@@ -32,9 +32,7 @@ class AdminController extends Controller
                 if(Hash::check($request->password,$login)){
                     $admin = Admin::first();
                     $request->session()->put('admin','1');
-                    $request->session()->put('admin_name',$admin->admin_name);
-                    return '1';
-                }
+                 
             }
 
 

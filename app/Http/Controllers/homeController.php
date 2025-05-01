@@ -23,7 +23,6 @@ class homeController extends Controller
     public function all_data(Request $request){
         $banner = Banner::select(['banner.*'])->get();
         $events = Event::select(['events.*','category.name as category_name'])->leftjoin('category','events.event_cat','=','category.id')->orderBy('event_id','desc')->limit(6)->get();
-        $category = Category::select(['category.*',DB::raw('count(events.event_cat) as count')])
         ->leftJoin('events','events.event_cat','=','category.id')->groupBy('category.id')->get();
         $categories = Category::select(['category.*',DB::raw('count(events.event_cat) as count')])
                     ->leftJoin('events','events.event_cat','=','category.id')->groupBy('category.id')
